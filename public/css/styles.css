@@ -47,6 +47,9 @@ li.not-done {
 input[type="text"] {
   padding: 10px;
   width: 40%;
+  border: 5px solid #1a681e;
+  color: #1a681e;
+  font-size: 1.25em;
 }
 
 button{
@@ -56,6 +59,8 @@ button{
   cursor: pointer;
   border: 1px solid #000;
   background: green;
+  border: 5px solid #1a681e;
+  font-size: 1.25em;
 }
 
 li:hover {
@@ -73,4 +78,15 @@ body {
   font-family: 'Ariel', sans-serif;
   padding: 5px;
   margin: 10px;
+}
+
+.submit-button {
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #000;
+  background: green;
+  border: 5px solid #1a681e;
+  font-size: 1.25em;
 }
