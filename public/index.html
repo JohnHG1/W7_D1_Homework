@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/bundle.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+          <li v-for="(task, index) in tasks" :class="task.isDone ? 'done':'not-done'">
+          <span @click="doTask(index)">{{task.name}}</span>
+          <span v-if="task.isDone">Done!</span>
+
+          <button v-if="task.isDone === false" @click="doTask(index)">Do</button>
+          </li>
+        </ul>
+
+        <form @submit.prevent="saveNewTask">
+          <label for="new-task">Add a new task:</label>
+          <input type="text" id="new/task" v-model="newTask">
+          <input type="submit" value="Save new task">
+
+
+        </form>
+
+  </div>
+</body>
+</html>
